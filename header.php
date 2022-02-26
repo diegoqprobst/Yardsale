@@ -46,7 +46,7 @@
                         Sign in
                     </a>
                     <a href="#" class="encabezado__link active">
-                        <img src="assets/img/header-empty-card.svg" alt="cart">
+                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/header-empty-card.svg" alt="cart">
                     </a>
                 </div>
             </div>
