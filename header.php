@@ -14,6 +14,7 @@
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Yards Sales</title>
+    <?php wp_head();?>
 </head>
 
 <body>
