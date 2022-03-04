@@ -6,10 +6,19 @@
         <?php } ?>
 <?php } ?>
 
+<?php
+$arg = array (
+"post_type" => array("producto"),
+"post_per_page" => -1
+);
+$productos = new WP_Query( $args );
+?>
 <main class="productos">
-        <div class="container-fluid gx-5">
+<div class="container-fluid gx-5">
 
-            <div class="productos__container">
+    <div class="productos__container">
+        <?php if($productos->have_posts()){ ?>
+            <?php while($productos->have_posts()){ $productos ->the_post();?>
                 <div class="productos__card">
                     <figure>
                         <img src="<?php echo get_template_directory_uri() ?>/assets/img/prod_1.png" alt="producto 1">
@@ -130,6 +139,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+        <?php } ?>
+    </div>
 
 <?php get_footer() ?>
